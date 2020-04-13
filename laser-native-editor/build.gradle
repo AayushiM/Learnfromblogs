@@ -19,11 +19,11 @@ ext {
 
 
 android {
-    signingConfigs {
+    /*signingConfigs {
         debug {
-            storeFile file('C:\\Users\\Champ\\.android\\debug.keystore')
+             storeFile file('C:\\Users\\Champ\\.android\\debug.keystore')
         }
-    }
+    }*/
     compileSdkVersion 29
 
     defaultConfig {

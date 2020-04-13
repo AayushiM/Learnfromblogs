@@ -316,11 +316,19 @@ public class CreatePostFragment extends AppCompatActivity {
         img2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (ContextCompat.checkSelfPermission(CreatePostFragment.this, android.Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED
+                        && ContextCompat.checkSelfPermission(CreatePostFragment.this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
+                        && ContextCompat.checkSelfPermission(CreatePostFragment.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
 
-                strImg = "2";
-                Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
-                galleryIntent.setType("*/*");
-                startActivityForResult(galleryIntent, 200);
+                    strImg = "2";
+                    Intent pickPhoto = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                    startActivityForResult(pickPhoto, 200);
+                }
+                //Old Code
+//                strImg = "2";
+//                Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
+//                galleryIntent.setType("*/*");
+//                startActivityForResult(galleryIntent, 200);
 
             }
         });
@@ -436,7 +444,19 @@ public class CreatePostFragment extends AppCompatActivity {
 //        RequestBody file2 = null;
         if (imageUri1 != null) {
 //            file2 = RequestBody.create(MediaType.parse("text/plain"), strImagePath1 );
-            File file1 = new File(imageUri2 != null ? getRealPathFromURI(imageUri2) : getRealPathFromURI(imageUri1));
+            //File file1 = new File(imageUri2 != null ? getRealPathFromURI(imageUri2) : getRealPathFromURI(imageUri1));
+
+            File file1 = null;
+
+            if (imageUri1 !=null){
+                file1 = new File(getRealPathFromURI(imageUri1));
+            }
+
+            if (imageUri2 != null){
+                file1 = new File(getRealPathFromURI(imageUri2));
+            }
+
+           // File file1 = new File(imageUri2 != null ? getRealPathFromURI(imageUri2) : getRealPathFromURI(imageUri1));
             if (file1.exists()) {
 
                 Log.e("strImagePath2", strImagePath2);
@@ -1130,12 +1150,27 @@ public class CreatePostFragment extends AppCompatActivity {
                 } catch (Exception e) {
 
                 }
-            } else {
+            }
+            if (strImg.equals("2")) {
+                try {
+                    imageUri2 = data.getData();
+                    img2.setImageURI(imageUri1);
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri2);
+                    strImagePath2 = imageUri2.getPath();
+                    close2.setVisibility(View.VISIBLE);
+                } catch (Exception e) {
+
+                }
+            }
+
+            //Old Code
+
+           /* else {
                 imageUri2 = data.getData();
                 strImagePath2 = imageUri2.getPath();
                 img2.setImageURI(imageUri2);
                 close2.setVisibility(View.VISIBLE);
-            }
+            }*/
         }
         if (requestCode == editor.PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
             Uri uri = data.getData();
