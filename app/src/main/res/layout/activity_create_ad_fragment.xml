@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".Fragment.CreateAdFragment">
+
+
+
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/_100sdp"
+			android:background="@drawable/img_login"/>
+
+		<LinearLayout
+			android:id="@+id/layoutTop"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Feed"
+				android:visibility="gone"
+				style="@style/titleText" />
+
+			<ScrollView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="@dimen/_35sdp"
+				android:padding="@dimen/_10sdp"
+				>
+
+			 <androidx.cardview.widget.CardView
+				 android:layout_width="match_parent"
+				 android:layout_height="wrap_content"
+				 app:cardCornerRadius="@dimen/_10sdp"
+				 app:cardUseCompatPadding="true">
+
+
+				 <LinearLayout
+					 android:layout_width="match_parent"
+					 android:layout_height="wrap_content"
+					 android:orientation="vertical"
+					 android:padding="@dimen/_10sdp"
+
+					 android:background="@color/white">
+
+					 <TextView
+						 android:layout_width="wrap_content"
+						 android:layout_height="wrap_content"
+						 android:text="Title"
+
+						 android:layout_marginLeft="@dimen/_4sdp"
+						 style="@style/LoginEdit"/>
+
+
+					 <EditText
+						 android:id="@+id/create_ad_ed_title"
+						 android:layout_width="match_parent"
+						 android:layout_height="@dimen/_40sdp"
+						 android:hint="Title minimum 10 character"
+						 android:background="@drawable/bc_corner_white"
+						 android:paddingLeft="@dimen/_5sdp"
+						 style="@style/Text_creat_post"
+						 android:layout_marginLeft="@dimen/_3sdp"
+						 android:layout_marginRight="@dimen/_3sdp"
+						 android:layout_marginTop="@dimen/_7sdp"
+						 android:textColorHint="@color/TextColor"
+						 android:elevation="@dimen/_3sdp"/>
+
+
+					 <TextView
+						 android:layout_width="wrap_content"
+						 android:layout_height="wrap_content"
+						 android:text="Categories"
+						 android:layout_marginTop="@dimen/_10sdp"
+						 android:layout_marginLeft="@dimen/_3sdp"
+						 style="@style/LoginEdit"/>
+
+
+					 <RelativeLayout
+						 android:layout_width="match_parent"
+						 android:layout_height="wrap_content"
+						 android:background="@drawable/bc_corner_white"
+						 android:elevation="@dimen/_5sdp"
+						 android:padding="@dimen/_5sdp"
+						 android:layout_marginTop="@dimen/_5sdp"
+						 android:layout_marginLeft="@dimen/_3sdp"
+						 android:layout_marginRight="@dimen/_3sdp"
+						 >
+						 <Spinner
+							 android:id="@+id/create_ad_sp_categories"
+							 android:layout_width="match_parent"
+							 android:layout_height="@dimen/_40sdp"
+							 android:background="@color/white"
+							 android:layout_weight="1"
+
+							 android:textColorHint="@color/TextColor" />
+
+
+						 <ImageView
+							 android:layout_width="@dimen/_30sdp"
+							 android:layout_height="@dimen/_30sdp"
+							 android:layout_alignParentRight="true"
+							 android:layout_centerVertical="true"
+							 android:src="@drawable/ic_dropdown"/>
+					 </RelativeLayout>
+
+
+
+					 <TextView
+						 android:layout_width="wrap_content"
+						 android:layout_height="wrap_content"
+						 android:text="No Of Days"
+						 android:layout_marginTop="@dimen/_10sdp"
+						 android:layout_marginLeft="@dimen/_3sdp"
+						 style="@style/LoginEdit"/>
+
+
+					 <RelativeLayout
+						 android:layout_width="match_parent"
+						 android:layout_height="wrap_content"
+						 android:background="@drawable/bc_corner_white"
+						 android:elevation="@dimen/_5sdp"
+						 android:padding="@dimen/_5sdp"
+						 android:layout_marginLeft="@dimen/_3sdp"
+						 android:layout_marginTop="@dimen/_5sdp"
+						 android:layout_marginRight="@dimen/_3sdp"
+						 >
+						 <Spinner
+							 android:id="@+id/create_ad_sp_no_of_day"
+							 android:layout_width="match_parent"
+							 android:layout_height="@dimen/_40sdp"
+							 android:background="@color/white"
+							 android:layout_weight="1"
+
+							 android:textColorHint="@color/TextColor" />
+
+
+						 <ImageView
+							 android:layout_width="@dimen/_30sdp"
+							 android:layout_height="@dimen/_30sdp"
+							 android:layout_alignParentRight="true"
+							 android:layout_centerVertical="true"
+							 android:src="@drawable/ic_dropdown"/>
+					 </RelativeLayout>
+
+
+
+					 <TextView
+						 android:layout_width="wrap_content"
+						 android:layout_height="wrap_content"
+						 android:text="Website"
+						 android:layout_marginTop="@dimen/_10sdp"
+						 android:layout_marginLeft="@dimen/_3sdp"
+						 style="@style/LoginEdit"/>
+
+
+					 <EditText
+						 android:id="@+id/create_ad_ed_website"
+						 android:layout_width="match_parent"
+						 android:layout_height="@dimen/_40sdp"
+						 android:hint="website"
+						 android:layout_marginTop="@dimen/_5sdp"
+						 android:background="@drawable/bc_corner_white"
+						 android:paddingLeft="@dimen/_5sdp"
+						 style="@style/Text_creat_post"
+						 android:layout_marginLeft="@dimen/_3sdp"
+						 android:layout_marginRight="@dimen/_3sdp"
+						 android:textColorHint="@color/TextColor"
+						 android:elevation="@dimen/_3sdp"/>
+
+
+
+					 <TextView
+						 android:layout_width="wrap_content"
+						 android:layout_height="wrap_content"
+						 android:text="Show Type"
+						 android:layout_marginTop="@dimen/_10sdp"
+						 android:layout_marginLeft="@dimen/_3sdp"
+						 style="@style/LoginEdit"/>
+
+
+					 <RelativeLayout
+						 android:layout_width="match_parent"
+						 android:layout_height="wrap_content"
+						 android:background="@drawable/bc_corner_white"
+						 android:elevation="@dimen/_5sdp"
+						 android:padding="@dimen/_5sdp"
+						 android:layout_marginTop="@dimen/_5sdp"
+						 android:layout_marginLeft="@dimen/_3sdp"
+						 android:layout_marginRight="@dimen/_3sdp">
+						 <Spinner
+							 android:id="@+id/create_ad_sp_show_type"
+							 android:layout_width="match_parent"
+							 android:layout_height="@dimen/_40sdp"
+							 android:background="@color/white"
+							 android:layout_weight="1"
+
+							 android:textColorHint="@color/TextColor" />
+
+
+						 <ImageView
+							 android:layout_width="@dimen/_30sdp"
+							 android:layout_height="@dimen/_30sdp"
+							 android:layout_alignParentRight="true"
+							 android:layout_centerVertical="true"
+							 android:src="@drawable/ic_dropdown"/>
+					 </RelativeLayout>
+
+
+					 <TextView
+						 android:layout_width="wrap_content"
+						 android:layout_height="wrap_content"
+						 android:text="Upload Image"
+						 android:layout_marginTop="@dimen/_10sdp"
+						 android:layout_marginLeft="@dimen/_3sdp"
+						 style="@style/LoginEdit"/>
+
+
+
+					 <ImageView
+						 android:id="@+id/create_ad_img_ad"
+						 android:layout_width="@dimen/_70sdp"
+						 android:layout_height="@dimen/_70sdp"
+						 android:layout_marginTop="@dimen/_5sdp"
+						 android:src="@drawable/ic_default_ad_img"/>
+
+
+
+
+					 <Button
+						 android:id="@+id/create_ad_btn_submit"
+						 android:layout_width="@dimen/_140sdp"
+						 android:layout_height="@dimen/_40sdp"
+						 android:layout_gravity="center"
+						 android:text="Submit"
+						 android:textColor="@color/white"
+						 android:textAllCaps="false"
+						 android:layout_marginTop="@dimen/_15sdp"
+						 android:background="@drawable/bc_round_color_primory"/>
+
+
+
+
+
+				 </LinearLayout>
+
+			 </androidx.cardview.widget.CardView>
+
+
+			</ScrollView>
+
+		</LinearLayout>
+
+
+	</RelativeLayout>
+
+</LinearLayout>

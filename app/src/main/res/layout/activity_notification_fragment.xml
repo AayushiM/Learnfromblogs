@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".Fragment.NotificationFragment">
+
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/_100sdp"
+			android:background="@drawable/img_login"/>
+
+		<LinearLayout
+			android:id="@+id/layoutTop"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@drawable/bc_corner_white"
+			android:layout_marginLeft="@dimen/_5sdp"
+			android:layout_marginRight="@dimen/_5sdp"
+			android:layout_marginTop="@dimen/_45sdp"
+			android:orientation="vertical"
+			android:padding="@dimen/_5sdp">
+
+
+			<ExpandableListView
+				android:id="@+id/notification_expandable_list"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:groupIndicator="@null"
+				/>
+
+
+			<ProgressBar
+				android:id="@+id/feed_progressbar"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:visibility="gone"/>
+		</LinearLayout>
+
+
+	</RelativeLayout>
+
+
+
+
+
+</LinearLayout>

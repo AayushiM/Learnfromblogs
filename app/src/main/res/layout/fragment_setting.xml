@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.SettingFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@drawable/img_login"/>
+
+        <LinearLayout
+            android:id="@+id/layoutTop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:visibility="visible"
+                android:gravity="center"
+                style="@style/titleText" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_10sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardUseCompatPadding="true">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notification Setting"
+                            android:visibility="visible"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp"
+                            android:textStyle="bold"
+                            android:gravity="center" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:padding="@dimen/_10sdp"
+                                android:orientation="vertical"
+                                android:background="@drawable/edittext_border">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="When someone selected my post as a favorites"
+                                    android:visibility="visible"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <CheckBox
+                                        android:id="@+id/setting_favotite_email"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/black"
+                                        android:buttonTint="@color/black"
+                                        android:text="Email"/>
+                                    <CheckBox
+                                        android:id="@+id/setting_favotite_notify"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_15sdp"
+                                        android:text="Notify"
+                                        android:buttonTint="@color/black"
+                                        android:textColor="@color/black"
+                                        tools:ignore="RtlCompat" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:padding="@dimen/_10sdp"
+                            android:orientation="vertical"
+                            android:background="@drawable/edittext_border">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="When someone comments on my post"
+                                android:visibility="visible"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_14sdp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <CheckBox
+                                    android:id="@+id/setting_comment_email"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:buttonTint="@color/black"
+                                    android:text="Email"/>
+                                <CheckBox
+                                    android:id="@+id/setting_comment_notify"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:text="Notify"
+                                    android:buttonTint="@color/black"
+                                    android:textColor="@color/black"
+                                    tools:ignore="RtlCompat" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:padding="@dimen/_10sdp"
+                            android:orientation="vertical"
+                            android:background="@drawable/edittext_border">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="When someone publish new post on my
+selected categories"
+                                android:visibility="visible"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_14sdp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <CheckBox
+                                    android:id="@+id/setting_post_email"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:buttonTint="@color/black"
+                                    android:text="Email"/>
+                                <CheckBox
+                                    android:id="@+id/setting_post_notify"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:text="Notify"
+                                    android:buttonTint="@color/black"
+                                    android:textColor="@color/black"
+                                    tools:ignore="RtlCompat" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <Button
+                            android:id="@+id/update_notification_setting"
+                            android:layout_width="@dimen/_140sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center"
+                            android:text="Update"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:background="@drawable/bc_round_color_primory"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Social Links"
+                            android:visibility="visible"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center" />
+
+                        <EditText
+                            android:id="@+id/setting_social_fb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp"
+                            android:hint="Facebook Url"
+                            android:textColorHint="@color/grey"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/edittext_border"/>
+                        <EditText
+                            android:id="@+id/setting_social_insta"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp"
+                            android:hint="Instagram Url"
+                            android:textColorHint="@color/grey"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/edittext_border"/>
+                        <EditText
+                            android:id="@+id/setting_social_twitter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp"
+                            android:hint="Twitter Url"
+                            android:textColorHint="@color/grey"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/edittext_border"/>
+                        <EditText
+                            android:id="@+id/setting_social_pinterest"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp"
+                            android:hint="Pinterest Url"
+                            android:textColorHint="@color/grey"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/edittext_border"/>
+                        <EditText
+                            android:id="@+id/setting_social_linkdin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp"
+                            android:hint="LinkedIn Url"
+                            android:textColorHint="@color/grey"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/edittext_border"/>
+                        <EditText
+                            android:id="@+id/setting_social_grp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp"
+                            android:hint="My Group Url"
+                            android:textColorHint="@color/grey"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/edittext_border"/>
+                        <Button
+                            android:id="@+id/update_social_link"
+                            android:layout_width="@dimen/_140sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center"
+                            android:text="Update"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:background="@drawable/bc_round_color_primory"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Change Password"
+                            android:visibility="visible"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center" />
+                        <EditText
+                            android:id="@+id/setting_password_old"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp"
+                            android:hint="Old Password"
+                            android:inputType="textPassword"
+                            android:textColorHint="@color/grey"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/edittext_border"/>
+                        <EditText
+                            android:id="@+id/setting_password_new_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp"
+                            android:hint="New Password"
+                            android:inputType="textPassword"
+                            android:textColorHint="@color/grey"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/edittext_border"/>
+                        <EditText
+                            android:id="@+id/setting_password_new_confirm_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp"
+                            android:hint="Confirm Password"
+                            android:inputType="textPassword"
+                            android:textColorHint="@color/grey"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/edittext_border"/>
+                        <Button
+                            android:id="@+id/update_Password"
+                            android:layout_width="@dimen/_140sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center"
+                            android:text="Change Password"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:background="@drawable/bc_round_color_primory"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Deactivate Account"
+                            android:drawableLeft="@drawable/ic_delete"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:visibility="visible"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_18sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="After deactivating account"
+                            android:visibility="visible"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1. Your created post and display profile will be closed"
+                            android:visibility="visible"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_5sdp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2. You can't enter with same login details"
+                            android:visibility="visible"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3. Your profile will not be visible"
+                            android:visibility="visible"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_5sdp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select any one reason"
+                            android:visibility="visible"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center" />
+
+                        <RadioGroup
+                            android:id="@+id/deactive_radio_grp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp">
+                            <RadioButton
+                                android:id="@+id/deactive_radio_quality"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_border"
+                                android:padding="@dimen/_5sdp"
+                                android:text="The quality of service was not good."
+                                android:textColor="@color/black"/>
+                            <RadioButton
+                                android:id="@+id/deactive_radio_dificult"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_border"
+                                android:padding="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:text=" I found the site difficult to use."
+                                android:textColor="@color/black"/>
+                            <RadioButton
+                                android:id="@+id/deactive_radio_cant_find"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_border"
+                                android:padding="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:text=" I can't find what I am looking for "
+                                android:textColor="@color/black"/>
+                            <RadioButton
+                                android:id="@+id/deactive_radio_negative"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_border"
+                                android:padding="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:text="I had a negative experience."
+                                android:textColor="@color/black"/>
+                            <RadioButton
+                                android:id="@+id/deactive_radio_other"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_border"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:padding="@dimen/_5sdp"
+                                android:text=" Other"
+                                android:textColor="@color/black"/>
+                        </RadioGroup>
+                        <EditText
+                            android:id="@+id/deactive_edittext_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp"
+                            android:hint="Describe your reason here"
+                            android:textColorHint="@color/grey"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/edittext_border"/>
+                        <Button
+                            android:id="@+id/update_deactivate"
+                            android:layout_width="@dimen/_140sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_gravity="center"
+                            android:text="Deactivate"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginBottom="@dimen/_15sdp"
+                            android:background="@drawable/bc_round_color_primory"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>
